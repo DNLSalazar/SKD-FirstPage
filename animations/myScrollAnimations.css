@@ -1,0 +1,36 @@
+
+.myAnimatable {
+    transform-style: preserve-3d;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+[my-animation ~= "bounce"] {
+    animation-timing-function: cubic-bezier(.57,-0.68,.47,1.86);
+}
+
+
+@keyframes animations {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes rotateAnimations {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
