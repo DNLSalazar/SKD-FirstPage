@@ -350,7 +350,8 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: linear-gradient(45deg, #ffffff 0%, #fff var(--px-backgroind), #1a1a1a calc(0% + var(--px-backgroind)), #1a1a1a calc(100% - var(--px-backgroind)), #fff calc(100% - var(--px-backgroind)), #fff 100%);
 }
 
@@ -389,8 +390,6 @@ header {
     min-height: 300px;
     width: 100%;
     max-width: 500px;
-    grid-column: 2 / 2;
-    grid-row: 1/ span 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -476,7 +475,7 @@ header {
 
     100% {
         clip-path: inset(0% 0% 0% 0%);
-        background-color: #1a1a1a;
+        background-color: #1a1a1a00;
     }
 }
 
@@ -488,7 +487,7 @@ header {
 
     100% {
         clip-path: inset(0% 0% 0% 0%);
-        background-color: #1a1a1a;
+        background-color: #1a1a1a00;
     }
 }
 
@@ -500,7 +499,7 @@ header {
 
     100% {
         clip-path: inset(0% 0% 0% 0%);
-        background-color: #1a1a1a;
+        background-color: #1a1a1a00;
     }
 }
 
@@ -699,4 +698,55 @@ transform: translateY(20px);
     }
 }
 
-@media only screen and (min-width: 1020px) {}
+@media only screen and (max-width: 650px) {
+
+    body {
+        --px-backgroind: 70px;
+    }
+
+    /*------------------------------PERSONAL--------------------------------------*/
+    .personalCards {
+        width: 100%;
+        padding: 0;
+    }
+
+    .personContainer {
+        width: 90%;
+        max-width: 350px;
+    }
+    .person {
+        width: 100%;
+    }
+
+    /*------------------------------CONTACT US--------------------------------------*/
+    .theFather {
+        width: 100%;
+        overflow-x: hidden;
+        height: auto;
+        margin: 50px 0;
+    }
+
+    .contactForm {
+        font-size: 1em;
+        width: 100%;
+        height: auto;
+        max-height: unset;
+        min-width: unset;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: unset;
+    }
+
+    .contactForm::before{
+        height: 2px;
+        width: unset;
+        top: 50%;
+        left: 20px;
+        right: 20px;
+        z-index: 10;
+
+    }
+
+    .textareaContainer {
+        max-width: unset;
+    }
+}
