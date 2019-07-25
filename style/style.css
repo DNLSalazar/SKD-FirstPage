@@ -640,13 +640,6 @@ transform: translateY(20px);
 }
 
 
-/* @media only screen and (min-width: 1000px) {
-  #services{
-    justify-content: space-around;
-  }
-} */
-
-
 @media only screen and (max-width: 1020px) {
 
     body {
@@ -698,10 +691,12 @@ transform: translateY(20px);
     }
 
 
+    /*------------------------------CONTACT US--------------------------------------*/
 
-
-
-
-
+    .contactForm {
+        font-size: 1em;
+        width: 90vh;
+    }
 }
+
 @media only screen and (min-width: 1020px) {}
