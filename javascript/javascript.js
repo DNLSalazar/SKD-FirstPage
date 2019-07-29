@@ -31,23 +31,13 @@ function scrollindicator (heightToScroll) {
 
 function FormAnimationTrigger () {
     if(form.getBoundingClientRect().top < 500) {
-        form.style.animationName = "animation";
+        form.style.animationName = "test";
         window.removeEventListener("scroll", FormAnimationTrigger);
         form.addEventListener("animationend", THEANIMATION);
     }
 }
 
 function THEANIMATION () {
-    i++;
-    form.style.animationDelay = "0s";
-    if (i < 3) {
-
-        if(i == 2){
-            (form.getElementsByClassName("basicInformationContainer"))[0].style.animationName = "animationLeftColumn";
-            (form.getElementsByClassName("textareaContainer"))[0].style.animationName = "animationRightColumn";
-        }
-        form.style.animationName = "animation" + i;
-        console.log(i);
-        form.addEventListener("animationend", THEANIMATION);
-    }
+    (form.getElementsByClassName("basicInformationContainer"))[0].style.animationName = "animationLeftColumn";
+    (form.getElementsByClassName("textareaContainer"))[0].style.animationName = "animationRightColumn";
 }
