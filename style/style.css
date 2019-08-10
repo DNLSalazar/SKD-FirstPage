@@ -250,7 +250,6 @@ header {
     width: 360px;
     background: linear-gradient(90deg, rgb(220, 220, 220) 50%, rgb(180, 180, 180) 50%, rgb(180, 180, 180) 100%);
     color: rgb(255, 255, 255);
-    /* padding: 15px; */
     position: relative;
 
     transform-style: preserve-3d;
@@ -325,12 +324,56 @@ header {
     justify-content: space-between;
     width: 60%;
     font-size: 1.8em;
+    position: relative;
+}
+
+.person .information span{
+  position: relative;
+}
+
+.information span span{
+  background-color: gray;
+  clip-path: inset(100% 100% 0% 0%);
+  overflow: hidden;
+  position: absolute;
+  padding: 5px;
+  height: 2px;
+  width: 2px;
+  top: 0px;
+  right: 0px;
+  font-size: .35em;
+  color: white;
+  transition: .5s all;
+  border-radius: 5px;
+}
+
+.information span span::before{
+  position: absolute;
+  bottom: 0;
+}
+
+.personContainer .information span a{
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
 }
 
 .personContainer:hover {
     transform: translatey(0px);
     box-shadow: 0px 10px 20px 5px hsla(205, 85%, 45%, 1);
 }
+
+.information span:hover i{
+    color: hsl(205, 95%, 45%);
+}
+
+.information span:hover span{
+    clip-path: inset(0);
+}
+
+/* .personContainer .information span:hover::after{
+  display: block;
+} */
 
 .enable-Left {
     transform-origin: left center;
@@ -608,6 +651,7 @@ transform: translateY(20px);
 .contact {
     color: white;
     display: flex;
+    background-color: #1A1A1A;
     flex-flow: row;
     flex-wrap: nowrap;
     justify-content: space-around;
