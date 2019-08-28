@@ -3,32 +3,38 @@
     color: hsl(200, 85%, 44%);
 }
 
+:root{
+  --primary: hsl(200, 85%, 44%);
+}
+
+
 * {
     box-sizing: border-box;
     scrollbar-width: none;
 }
 
 body {
-    --px-backgroind: 180px;
+    --px-background: 180px;
     font-size: unset;
-    background-color: #000000;
+    background-color: #1A1A1A;
     font-family: 'Poppins', Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
     margin: 0;
     min-height: 100vh;
     padding: 0;
     height: auto;
     width: 100%;
+    color: white;
     overflow-x: hidden;
-}
-
-
-body {
-  overflow-y: scroll;
-  scrollbar-color: rgb(0, 0, 0) rgb(0, 0, 0);
+    overflow-y: scroll;
+    scrollbar-color: rgb(0, 0, 0) rgb(0, 0, 0);
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+h1{
+  color: var(--primary);
 }
 
 header {
@@ -56,12 +62,14 @@ header {
 
 #hero {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/WallpaperLogo.webp);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url(../img/SKD.PNG);
     background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
@@ -92,6 +100,17 @@ header {
     font-size: 5em;
 }
 
+/*----------------------------------Why us-----------------------------------------*/
+
+#whyus{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  width: 100%;
+}
+
 /*-----------------------------------Services--------------------------------------*/
 
 
@@ -115,7 +134,6 @@ header {
   margin: 0;
   width: 100%;
   text-align: center;
-  color: white;
 }
 
 #services i{
@@ -128,7 +146,7 @@ header {
     width: 100%;
     margin: 0px 0;
     text-align: center;
-    color: white;
+    color: var(--primary);
 }
 
 .servicesCards {
@@ -327,35 +345,43 @@ header {
     position: relative;
 }
 
-.person .information span{
+.person .information div{
   position: relative;
 }
 
-.information span span{
+.information div span{
   background-color: gray;
+  border-radius: 5px;
+  bottom: 90%;
   clip-path: inset(100% 100% 0% 0%);
+  color: white;
+  display: block;
+  font-size: .35em;
+  max-height: 22px;
+  left: 90%;
   overflow: hidden;
   position: absolute;
   padding: 5px;
-  height: 2px;
-  width: 2px;
-  top: 0px;
-  right: 0px;
-  font-size: .35em;
-  color: white;
   transition: .5s all;
-  border-radius: 5px;
 }
 
-.information span span::before{
-  position: absolute;
-  bottom: 0;
+.personContainer .information div span::before{
+  content: "";
+  display: block;
+  position: inherit;
+  background-color: green;
+  top: 100%;
+  right: 100%;
+  width: 25px;
+  height: 25px;
+  clip-path: polygon(50% 0, 50% 50%, 100% 0);
+  z-index: 2;
 }
 
-.personContainer .information span a{
-  text-decoration: none;
-  cursor: pointer;
+.personContainer .information div a{
   color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .personContainer:hover {
@@ -363,11 +389,11 @@ header {
     box-shadow: 0px 10px 20px 5px hsla(205, 85%, 45%, 1);
 }
 
-.information span:hover i{
+.information div:hover i{
     color: hsl(205, 95%, 45%);
 }
 
-.information span:hover span{
+.information div:hover span{
     clip-path: inset(0);
 }
 
