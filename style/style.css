@@ -29,12 +29,9 @@ body {
     color: white;
     overflow-x: hidden;
     overflow-y: scroll;
-    /* scrollbar-color: rgb(0, 0, 0) rgb(0, 0, 0); */
+    scroll-behavior: smooth;
 }
 
-/* body::-webkit-scrollbar {
-  display: none;
-} */
 
 h1{
   color: var(--primary);
@@ -51,6 +48,58 @@ header {
     z-index: 10;
 }
 
+.arrow{
+  position: absolute;
+  bottom: 50px;
+  right: 10%;
+  border-right: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  transform: rotateZ(45deg);
+  animation: arrow 2.3s ease infinite 1.5s;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.arrow::after{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  border-right: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  /* transform: rotateZ(45deg); */
+  /* animation: arrows 2.3s ease infinite 1.7s; */
+  /* opacity: 0; */
+  width: 20px;
+  height: 20px;
+}
+
+.arrow::before{
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  border-right: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  /* transform: rotateZ(45deg); */
+  /* animation: arrows 2.3s ease-in infinite 1.5s; */
+  /* opacity: 0; */
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes arrow{
+  0% 100%{
+    opacity: 0;
+    transform: translate(0,0) rotate(45deg);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0,40px) rotate(45deg);
+  }
+}
+
 .container{
   display: flex;
   justify-content: center;
@@ -58,6 +107,7 @@ header {
   flex-wrap: wrap;
   min-height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 #scrollIndicator {
