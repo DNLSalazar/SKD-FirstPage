@@ -1,0 +1,31 @@
+#word {
+  display: inline-block;
+  min-width: 5px;
+  min-height: 19px;
+  width: auto;
+  position: relative;
+}
+
+#word::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 75%;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: -6px;
+  background-color: rgb(255, 255, 255);
+  animation-name: cursorAnimtion;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cursorAnimtion {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
