@@ -6,14 +6,14 @@
 :root{
   --primary: hsl(200, 85%, 44%);
   --secondary: white;
-  /* hsl(200, 73%, 13%) Navy Blue */ 
+  /* hsl(200, 73%, 13%) Navy Blue */
   --background: hsl(0, 0%, 10%);
 }
 
 
 * {
     box-sizing: border-box;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 
 body {
@@ -29,12 +29,12 @@ body {
     color: white;
     overflow-x: hidden;
     overflow-y: scroll;
-    scrollbar-color: rgb(0, 0, 0) rgb(0, 0, 0);
+    /* scrollbar-color: rgb(0, 0, 0) rgb(0, 0, 0); */
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 h1{
   color: var(--primary);
@@ -68,7 +68,6 @@ header {
   background-color: rgb(27, 125, 195);
   z-index: 10;
   transform-origin: left center;
-  z-index: 15;
   transform: scale(0, 1);
 }
 
@@ -77,7 +76,7 @@ header {
     min-height: 100vh;
     height: auto;
     width: 100%;
-    background-image: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url(../img/SKD.png);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url(../img/SKDanimation.gif);
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -705,15 +704,65 @@ transform: translateY(20px);
 
 /*-----------------------------------Icons---------------------------------*/
 
+footer {
+  width: 100%;
+  padding: 190px 5% 15px 5%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+}
+
+footer .contact {
+  width: 300px;
+  margin: 0;
+  position: relative;
+  padding-left: 40px;
+}
+
+footer .imageF {
+  width: 100%;
+  margin: 0 0 40px 0;
+}
+
+#another {
+  width: auto;
+  margin: 0 20px;
+}
+
+#logoFooter {
+  min-width: 200px;
+  max-width: 300px;
+}
+
+#location::before {
+  content: url(../img/icon-location.svg);
+  position: absolute;
+  left: 5px;
+}
+
+#number::before {
+  content: url(../img/icon-phone.svg);
+  position: absolute;
+  left: 0;
+}
+
+#email::before {
+  content: url(../img/icon-email.svg);
+  position: absolute;
+  left: 0;
+}
+
 .contact {
     color: white;
     display: flex;
     background-color: var(--background);
     flex-flow: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    min-width: 320px;
+    width: 30%;
     min-height: 30vh;
 }
 
