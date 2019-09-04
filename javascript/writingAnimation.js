@@ -4,7 +4,7 @@ var wordElement = document.getElementById("word");
 var currentWord = wordElement.innerHTML;
 var status = 0;
 var timeout;
-const time = 100;
+const time = 150;
 
 window.addEventListener("load", function () {
   setTimeout(animation, time);

@@ -89,7 +89,7 @@ header {
 }
 
 @keyframes arrow{
-  0% 100%{
+  0%, 100%{
     opacity: 0;
     transform: translate(0,0) rotate(45deg);
   }
@@ -162,14 +162,9 @@ header {
 
 /*----------------------------------Why us-----------------------------------------*/
 
-/* #whyus{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  width: 100%;
-} */
+#whyus{
+  background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
+}
 
 #whyus div{
   width: 50ch;
@@ -294,9 +289,8 @@ header {
 
 /*-----------------------------------WORKS------------------------------------------*/
 
-
 #works{
-
+  background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
 }
 
 #works h1{
@@ -304,13 +298,43 @@ header {
   text-align: center;
 }
 
+.workCards {
+  margin: 50px 0 100px 0;
+}
+
 .work{
+  margin: 20px 50px;
   width: 300px;
   height: 250px;
   background-color: black;
   margin: 0 20 0 20;
+  transition: .5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
 }
 
+.work > h2 {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.work:hover > h2 {
+  opacity: 1;
+}
+
+.work:nth-child(3):hover {
+  box-shadow: -250px 250px 0px 250px inset rgba(255, 255, 255, 0.527);
+}
+
+.work:nth-child(1):hover {
+  box-shadow: 250px 250px 0px 250px inset rgba(255, 255, 255, 0.527);
+}
+
+.work:nth-child(2):hover {
+  box-shadow: 0px 250px 0px 250px inset rgba(255, 255, 255, 0.527);
+}
 
 /*-----------------------------------PERSONAL CARDS---------------------------------*/
 
@@ -321,7 +345,7 @@ header {
     height: auto;
     /* background: linear-gradient(-45deg, #ffc107 0%, #ff0000 5%, rgb(45, 45, 45) 5%, rgb(45, 45, 45) 95%, #00bcd4 95%, #89ff00 100%); */
 
-    background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
+    background: linear-gradient(45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -510,7 +534,7 @@ header {
   width: 100%;
   min-height: 100vh;
   height: auto;
-  background: linear-gradient(45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
+  background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
 }
 
 .contactForm{
