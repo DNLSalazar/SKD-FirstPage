@@ -779,27 +779,42 @@ transform: translateY(20px);
 
 footer {
   width: 100%;
-  padding: 190px 5% 15px 5%;
-  flex-direction: row;
+  padding: 100px 3% 100px 5%;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between !important;
-  align-items: flex-start !important;
-}
-
-footer .contact {
-  width: 300px;
-  margin: 0;
-  position: relative;
-  padding-left: 40px;
+  justify-content: center;
 }
 
 footer .imageF {
-  width: 100%;
-  margin: 0 0 40px 0;
+  width: 30%;
+  text-align: center;
+  align-self: flex-start;
 }
 
+footer .contacCont{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact {
+  position: relative;
+  padding-left: 30px;
+  color: white;
+  background-color: var(--background);
+  width: 35%;
+  min-height: 15vh;
+}
+
+footer .contacCont .contact:last-child{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 #another {
-  width: auto;
   margin: 0 20px;
 }
 
@@ -825,20 +840,6 @@ footer .imageF {
   position: absolute;
   left: 0;
 }
-
-.contact {
-    color: white;
-    display: flex;
-    background-color: var(--background);
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    min-width: 320px;
-    width: 30%;
-    min-height: 30vh;
-}
-
 .iconRS {
     align-items: center;
     display: flex;
@@ -849,6 +850,7 @@ footer .imageF {
     text-align: center;
     width: 50px;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .iconRS span {
@@ -964,6 +966,44 @@ footer .imageF {
         font-size: 1em;
         width: 90vh;
     }
+
+    /*---------------------Footer----------------------*/
+
+    footer{
+      padding: 50px 3% 25px 3%;
+    }
+
+    footer .imageF {
+      width: 100%;
+    }
+
+    footer .contacCont{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .contact{
+      width: 47%;
+      text-align: center;
+    }
+
+    footer .contacCont .contact:last-child{
+      width: 100%;
+      justify-content: center;
+    }
+
+    #location::before {
+      left: 100px;
+    }
+
+    #number::before {
+      left: 125px;
+    }
+
+    #email::before {
+      left: 100px;
+    }
 }
 
 @media only screen and (max-width: 650px) {
@@ -1016,5 +1056,35 @@ footer .imageF {
 
     .textareaContainer {
         max-width: unset;
+    }
+
+    /*-------------------Footer------------------------------*/
+
+    footer{
+      padding: 100px 3% 25px 5%;
+    }
+
+    footer .imageF {
+      width: 100%;
+    }
+
+    footer .contacCont{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .contact{
+      width: 50%;
+    }
+
+    footer .contacCont .contact:last-child{
+      width: 100%;
+      justify-content: center;
+    }
+
+    .iconRS{
+      margin: 15px auto;
     }
 }
