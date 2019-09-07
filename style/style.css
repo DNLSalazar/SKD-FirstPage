@@ -811,6 +811,7 @@ footer .contacCont{
 footer .contacCont .contact:last-child{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
@@ -850,7 +851,6 @@ footer .contacCont .contact:last-child{
     text-align: center;
     width: 50px;
     cursor: pointer;
-    margin-right: 20px;
 }
 
 .iconRS span {
@@ -970,7 +970,7 @@ footer .contacCont .contact:last-child{
     /*---------------------Footer----------------------*/
 
     footer{
-      padding: 50px 3% 25px 3%;
+      padding: 50px 5% 25px 5%;
     }
 
     footer .imageF {
@@ -990,19 +990,18 @@ footer .contacCont .contact:last-child{
 
     footer .contacCont .contact:last-child{
       width: 100%;
-      justify-content: center;
     }
 
     #location::before {
-      left: 100px;
+      left: 60px;
     }
 
     #number::before {
-      left: 125px;
+      left: 70px;
     }
 
     #email::before {
-      left: 100px;
+      left: 60px;
     }
 }
 
@@ -1081,11 +1080,22 @@ footer .contacCont .contact:last-child{
 
     footer .contacCont .contact:last-child{
       width: 100%;
-      justify-content: center;
     }
 
     .iconRS{
       margin: 15px auto;
+    }
+
+    #location::before {
+      left: 5px;
+    }
+
+    #number::before {
+      left: 5px;
+    }
+
+    #email::before {
+      left: 5px;
     }
 }
 
