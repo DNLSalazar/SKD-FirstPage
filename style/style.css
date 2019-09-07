@@ -339,57 +339,57 @@ header {
 /*-----------------------------------PERSONAL CARDS---------------------------------*/
 
 #personal {
-    margin: 0;
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
-    /* background: linear-gradient(-45deg, #ffc107 0%, #ff0000 5%, rgb(45, 45, 45) 5%, rgb(45, 45, 45) 95%, #00bcd4 95%, #89ff00 100%); */
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  /* background: linear-gradient(-45deg, #ffc107 0%, #ff0000 5%, rgb(45, 45, 45) 5%, rgb(45, 45, 45) 95%, #00bcd4 95%, #89ff00 100%); */
 
-    background: linear-gradient(45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  background: linear-gradient(45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .personalCards {
-    width: 1400px;
-    height: 580px;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/heroWallpaper.jpg); */
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+  max-width: 1400px;
+  width: auto;
+  min-height: 580px;
+  height: auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;
+
+  /* flex-wrap: wrap; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
 }
 
 .person {
-    height: 500px;
-    width: 360px;
-    background: linear-gradient(90deg, rgb(220, 220, 220) 50%, rgb(180, 180, 180) 50%, rgb(180, 180, 180) 100%);
-    color: rgb(255, 255, 255);
-    position: relative;
+  height: 500px;
+  width: 360px;
+  background: linear-gradient(90deg, rgb(220, 220, 220) 50%, rgb(180, 180, 180) 50%, rgb(180, 180, 180) 100%);
+  color: rgb(255, 255, 255);
+  position: relative;
 
-    transform-style: preserve-3d;
-    transition: .5s ease-in-out;
+  transform-style: preserve-3d;
+  transition: .5s ease-in-out;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 6;
 }
 
 .personContainer {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: .5s ease-in-out;
-    margin: 0 15px;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .5s ease-in-out;
+  margin: 0 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .personContainer::before {
@@ -944,15 +944,15 @@ footer .contacCont .contact:last-child{
     /*------------------------------PERSONAL--------------------------------------*/
 
     .personalCards {
-        width: auto;
-        height: auto;
-        padding: 100px 50px;
-        flex-wrap: wrap;
+      width: auto;
+      height: auto;
+      padding: 100px 50px;
+      flex-wrap: wrap;
     }
 
     .personContainer {
-        transform: translatey(0);
-        margin: 25px;
+      transform: translatey(0);
+      margin: 25px;
     }
 
     .personContainer .title{
@@ -1087,4 +1087,18 @@ footer .contacCont .contact:last-child{
     .iconRS{
       margin: 15px auto;
     }
+}
+
+
+
+
+@media only screen and (max-width: 1400px) {
+  .personContainer {
+    transform: translate(0);
+    margin: 80px;
+  }
+
+  .personalCards {
+    flex-wrap: wrap;
+  }
 }
