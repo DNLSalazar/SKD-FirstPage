@@ -792,6 +792,13 @@ footer .imageF {
   width: 30%;
   text-align: center;
   align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+footer .imageF img{
+  margin-bottom: 80px;
 }
 
 footer .contacCont{
