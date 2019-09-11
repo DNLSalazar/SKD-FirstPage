@@ -6,10 +6,8 @@
 :root{
   --primary: hsl(200, 85%, 44%);
   --secondary: white;
-  /* hsl(200, 73%, 13%) Navy Blue */
   --background: hsl(0, 0%, 10%);
 }
-
 
 * {
     box-sizing: border-box;
@@ -51,13 +49,27 @@ header {
   position: absolute;
   bottom: 70px;
   right: 10%;
-  border-right: 2px solid #FFF;
-  border-bottom: 2px solid #FFF;
+  border-right: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
   transform: rotateZ(45deg);
   animation: arrow 2.3s ease infinite 1.5s;
   opacity: 0;
   width: 20px;
   height: 20px;
+  z-index: 2;
+}
+
+.arrow::before{
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  border-right: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
+  /* transform: rotateZ(45deg); */
+  /* animation: arrows 2.3s ease-in infinite 1.5s; */
+  width: 18px;
+  height: 18px;
 }
 
 .arrow::after{
@@ -65,28 +77,14 @@ header {
   position: absolute;
   bottom: -10px;
   right: -10px;
-  border-right: 2px solid #FFF;
-  border-bottom: 2px solid #FFF;
+  border-right: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
   /* transform: rotateZ(45deg); */
   /* animation: arrows 2.3s ease infinite 1.7s; */
-  /* opacity: 0; */
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 
-.arrow::before{
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  border-right: 2px solid #FFF;
-  border-bottom: 2px solid #FFF;
-  /* transform: rotateZ(45deg); */
-  /* animation: arrows 2.3s ease-in infinite 1.5s; */
-  /* opacity: 0; */
-  width: 20px;
-  height: 20px;
-}
 
 @keyframes arrow{
   0%, 100%{
@@ -129,7 +127,6 @@ header {
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
@@ -168,16 +165,36 @@ header {
 }
 
 #whyus div{
-  width: 50ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 50ch;
   text-align: center;
+  margin-top: 50px;
 }
+
+#whyus p{
+  width: 50ch;
+}
+
+#full{
+  width: 100%;
+}
+
+#whyus div img{
+  width: 100px;
+}
+
+
 
 /*-----------------------------------Services--------------------------------------*/
 
 
 #services{
     padding: 15px 0 0 0;
-    z-index: 5;
+    z-index: 1;
     position: relative;
     /* background: linear-gradient(45deg, #89ff00 0%, #00bcd4 5%, rgb(90, 90, 90) 5%, rgb(90, 90, 90) 95%, #ff0000 95%, #ffc107 100%); */
     /* background: linear-gradient(45deg, #ffffff 0%, #fff 10%, #1a1a1a 10%, #1a1a1a 90%, #fff 90%, #fff 100%); */
@@ -219,7 +236,7 @@ header {
   height: 200px;
   width: 300px;
   margin-bottom: 50px;
-  z-index: 5;
+  z-index: 1;
   transition: .5s ease;
   position: relative;
 }
@@ -289,7 +306,7 @@ header {
 }
 
 /*-----------------------------------WORKS------------------------------------------*/
-
+/*
 #works{
   display: none;
   background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
@@ -336,7 +353,7 @@ header {
 
 .work:nth-child(2):hover {
   box-shadow: 0px 250px 0px 250px inset rgba(255, 255, 255, 0.527);
-}
+} */
 
 /*-----------------------------------PERSONAL CARDS---------------------------------*/
 
@@ -366,7 +383,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5;
+  z-index: 1;
 }
 
 .person {
@@ -774,10 +791,6 @@ header {
 transform: translateY(20px);
 } */
 
-
-
-
-
 /*-----------------------------------Icons---------------------------------*/
 
 footer {
@@ -1108,9 +1121,6 @@ footer .contacCont .contact:last-child{
       left: 5px;
     }
 }
-
-
-
 
 @media only screen and (max-width: 1400px) {
   .personContainer {
