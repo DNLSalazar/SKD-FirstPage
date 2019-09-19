@@ -123,7 +123,7 @@ header {
     min-height: 100vh;
     height: auto;
     width: 100%;
-    background-image: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url(../img/SKDanimation.gif);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url(../img/SKDanimation.webp);
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
