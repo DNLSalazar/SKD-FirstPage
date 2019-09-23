@@ -130,7 +130,7 @@ header {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
 }
 
@@ -147,6 +147,7 @@ header {
     font-size: 3em;
     padding-bottom: 85px;
     padding-left: 50px;
+    min-width: 300px;
 }
 
 .titleDiv {
@@ -170,13 +171,13 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-width: 50ch;
+  min-width: 45ch;
   text-align: center;
   margin-top: 50px;
 }
 
 #whyus p{
-  width: 50ch;
+  width: 45ch;
 }
 
 #full{
@@ -481,6 +482,7 @@ header {
   display: block;
   font-size: .35em;
   max-height: 22px;
+  white-space: nowrap;
   left: 90%;
   overflow: hidden;
   position: absolute;
@@ -876,6 +878,10 @@ footer .contacCont .contact:last-child{
     cursor: pointer;
 }
 
+#Rs{
+  padding: 0;
+}
+
 .iconRS span {
     background-color: #1280ce;
     border-radius: 25px;
@@ -935,14 +941,6 @@ footer .contacCont .contact:last-child{
         --px-backgroind: 100px;
     }
 
-    .titleDiv {
-        padding: 50px 25px 0 0;
-    }
-
-    .weDiv {
-        padding: 0 0 50px 25px;
-    }
-
     /*------------------------------SERVICES--------------------------------------*/
 
     .servicesCards {
@@ -954,11 +952,11 @@ footer .contacCont .contact:last-child{
     }
 
     .card-body {
-        top: -40px;
+        top: -35px;
     }
 
     .service-card:hover > .card-body {
-        transform: translateY(calc(100% + 40px));
+        transform: translateY(calc(100% + 35px));
         background-color: white;;
         box-shadow: none;
         /* background-color: hsla(205, 85%, 45%, 1); */
@@ -1032,6 +1030,29 @@ footer .contacCont .contact:last-child{
 
     body {
         --px-backgroind: 70px;
+    }
+
+    /* .titleDiv {
+        padding: 50px 25px 0 0;
+    } */
+
+    #hero{
+      justify-content: center;
+    }
+
+    #word{
+      display: block !important;
+    }
+
+    .weDiv h3{
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+
+    .weDiv {
+      padding: 0;
+      justify-content: center;
     }
 
     /*------------------------------PERSONAL--------------------------------------*/

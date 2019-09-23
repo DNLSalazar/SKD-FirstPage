@@ -6,7 +6,7 @@
   position: relative;
 }
 
-#word::before {
+#word::after {
   position: absolute;
   content: "";
   width: 5px;
@@ -18,6 +18,15 @@
   animation-name: cursorAnimtion;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 600px){
+  #word::after{
+    display: inline-block;
+    position: relative;
+    transform: translate(0,20%);
+    height: 46px;
+  }
 }
 
 @keyframes cursorAnimtion {
