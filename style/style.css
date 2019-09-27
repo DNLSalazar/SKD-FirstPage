@@ -486,7 +486,7 @@ header {
   left: 90%;
   overflow: hidden;
   position: absolute;
-  padding: 5px;
+  padding: 4px;
   transition: .5s all;
 }
 
