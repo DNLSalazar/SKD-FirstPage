@@ -1,0 +1,40 @@
+#word {
+  display: inline-block;
+  min-width: 5px;
+  min-height: 19px;
+  width: auto;
+  position: relative;
+}
+
+#word::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 75%;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: -6px;
+  background-color: rgb(255, 255, 255);
+  animation-name: cursorAnimtion;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 600px){
+  #word::after{
+    display: inline-block;
+    position: relative;
+    transform: translate(0,20%);
+    height: 46px;
+  }
+}
+
+@keyframes cursorAnimtion {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

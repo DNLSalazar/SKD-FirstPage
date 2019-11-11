@@ -4,189 +4,288 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
     <link rel="stylesheet" href="animations/myScrollAnimations.css">
-    <link rel="stylesheet" href="/style/style.css">
-    <title>The PolloS</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/writingAnimation.css">
+    <title>Simple Kode Design | Web development team</title>
 </head>
 <body>
-    <header>
-      <div id="scrollIndicator"></div>
-    </header>
+  <!-- <header>
+    <div id="scrollIndicator"></div>
+  </header> -->
 
     <section id="hero">
-        <div class="titleDiv">
-            <h1 class="myAnimatable" my-animation="fade right">SKD</h1>
-        </div>
+        <!-- <div class="titleDiv">
+            <h1 class="myAnimatable" my-animation="fade right"></h1>
+        </div> -->
 
         <div class="weDiv">
-            <h3 class="myAnimatable" my-animation="bounce left">Full Stack Web Developers and Designers</h3>
+            <h3 class="myAnimatable" my-animation="bounce left">Make it <span id="word"></span></h3>
         </div>
+
+        <a href="#whyus" class="arrow"></a>
     </section>
 
-    <section id="services">
+    <section class="container" id="services">
         <div class="titles" id="service-title">
-          <h1>Services</h1>
+          <h1>Our services</h1>
         </div>
 
         <div class="servicesCards">
-
-            <div class="container myAnimatable" my-animation="fade left">
-                <div class="service-card">
-                  <div class="card-header">
-                    <span><i class="fas fa-eye"></i>
-                      <!-- <i class="fas fa-pencil-alt"></i> No se cual guste más -->
-                    </span>
-                  </div>
-                  <div class="card-body">
-                    <h2>Design</h2>
-                    <p class="content">We design responsive, simple and nice to look web sites</p>
-                    <p class="content">We use Photoshop, Illutstrator, After Effects, Camtasia</p>
-                  </div>
+          <div class="containerCards myAnimatable" my-animation="fade left">
+              <div class="service-card">
+                <div class="card-header">
+                  <span><i class="fas fa-eye"></i>
+                    <!-- <i class="fas fa-pencil-alt"></i> No se cual guste más -->
+                  </span>
                 </div>
-            </div>
-
-            <div class="container myAnimatable" my-animation="fade bottom">
-                <div class="service-card" id="Frontend">
-                  <div class="card-header">
-                    <span><i class="fas fa-laptop-code"></i></span>
-                  </div>
-                  <div class="card-body">
-                    <h2>Frontend</h2>
-                    <p class="content">We design responsive, simple and nice to look web sites</p>
-                    <p class="content">We use HTML, CSS, Javascript, JQuery, Angular, Sass, Bootstrap, Wordpress</p>
-                  </div>
+                <div class="card-body">
+                  <h2>Design</h2>
+                  <p class="content">We design responsive, simple and nice to look web sites</p>
+                  <p class="content">We can use Photoshop, Illutstrator, After Effects, Camtasia</p>
                 </div>
-            </div>
+              </div>
+          </div>
 
-            <div class="container myAnimatable" my-animation="fade right">
-                <div class="service-card">
-                  <div class="card-header">
-                    <span><i class="fas fa-server"></i></span>
-                  </div>
-                  <div class="card-body">
-                    <h2>Backend</h2>
-                    <p class="content">We build strong and scalable platforms for your websites</p>
-                    <p class="content">We use PHP, Laravel, MySQL, Nginx, NodeJs</p>
-                  </div>
+          <div class="containerCards myAnimatable" my-animation="fade bottom">
+              <div class="service-card" id="Frontend">
+                <div class="card-header">
+                  <span><i class="fas fa-laptop-code"></i></span>
                 </div>
-            </div>
+                <div class="card-body">
+                  <h2>Frontend</h2>
+                  <p class="content">We design responsive, simple and nice to look web sites</p>
+                  <p class="content">We can use HTML, CSS, Javascript, JQuery, React, Angular, SASS, Bootstrap, Wordpress</p>
+                </div>
+              </div>
+          </div>
 
-
+          <div class="containerCards myAnimatable" my-animation="fade right">
+              <div class="service-card">
+                <div class="card-header">
+                  <span><i class="fas fa-server"></i></span>
+                </div>
+                <div class="card-body">
+                  <h2>Backend</h2>
+                  <p class="content">We build strong and scalable platforms for your websites</p>
+                  <p class="content">We can use PHP, Laravel, MySQL, Nginx, NodeJs</p>
+                </div>
+              </div>
+          </div>
         </div>
-
+        <a href="#personal" class="arrow"></a>
     </section>
 
-    <section id="personal">
-        <div class="titles">
-          <h1>Our Team</h1>
-        </div>
-        <div class="personalCards">
-
-            <div class="personContainer enable-Left">
-                <div class="person card1">
-                    <img src="" alt="">
-                    <h3 class="name">(Los Pros - Edgar)^999</h3>
-                    <p class="information">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, sapiente quia unde aut veniam qui, quisquam corporis ipsum iure voluptatem perferendis voluptates placeat sint molestiae? Accusantium recusandae veniam incidunt optio.</p>
-                </div>
-            </div>
-
-            <div class="personContainer enable-Left">
-                <div class="person card2">
-                    <img src="" alt="">
-                    <h3 class="name">(Los Pros - Edgar)^999</h3>
-                    <p class="information">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, sapiente quia unde aut veniam qui, quisquam corporis ipsum iure voluptatem perferendis voluptates placeat sint molestiae? Accusantium recusandae veniam incidunt optio.</p>
-                </div>
-            </div>
-
-            <div class="personContainer enable-right">
-                <div class="person">
-                    <img src="" alt="">
-                    <h3 class="name">(Los Pros - Edgar)^999</h3>
-                    <p class="information">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, sapiente quia unde aut veniam qui, quisquam corporis ipsum iure voluptatem perferendis voluptates placeat sint molestiae? Accusantium recusandae veniam incidunt optio.</p>
-                </div>
-            </div>
-
-
-            <div class="personContainer enable-right">
-                <div class="person">
-                    <img src="" alt="">
-                    <h3 class="name">(Los Pros - Edgar)^999</h3>
-                    <p class="information">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, sapiente quia unde aut veniam qui, quisquam corporis ipsum iure voluptatem perferendis voluptates placeat sint molestiae? Accusantium recusandae veniam incidunt optio.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contactus">
-
-      <div class="theFather">
-          <form class="contactForm" action="index.html" method="post" id="contatcForm">
-              <div class="basicInformationContainer">
-                  <h1>Write us</h1>
-                  <div class="inputContainer">
-                      <label for="name">Name</label>
-                      <input class="input" type="text" name="name" value="" id="name">
-                  </div>
-          
-                  <div class="inputContainer">
-                      <label for="email">Email</label>
-                      <input class="input" type="email" name="email" value="" id="email">
-                  </div>
-              </div>
-
-              <div class="textareaContainer">
-                  <textarea class="textarea" name="name" placeholder="write something here"></textarea>
-                  <input type="submit" value="Submit" id="submit">
-              </div>
-      </form>
+    <section class="container" id="whyus">
+      <div id="full">
+        <img src="img/Solution.svg" alt="Solution">
+        <h1>Every problem has a simple solution</h1> <!--You dream it, we build it for you-->
+        <!-- We are a young group of web development based on teamwork and continuos learning ready to -->
+        <p>We can make modern, minimalist and elegant solutions.</p>
       </div>
+      <div>
+        <img src="img/Project.svg" alt="Project">
+        <h2>All kind of projects</h2>
+
+        <p>Since small websites to full platforms with updated tools</p>
+      </div>
+      <div>
+        <img src="img/Confort.svg" alt="Confort">
+        <h2>We search your confort</h2>
+
+        <p>Friendly and good user experience</p>
+      </div>
+      <a href="#services" class="arrow"></a>
+    </section>
+
+  <!-- <section class="container" id="works">
+    <div class="titles" id="service-title">
+      <h1>Look some of our works</h1>
+    </div>
+
+    <div class="servicesCards workCards">
+      <div class="work">
+        <h2>Title</h2>
+      </div>
+      <div class="work">
+        <h2>Title</h2>
+      </div>
+      <div class="work">
+        <h2>Title</h2>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="container" id="personal">
+      <div class="titles">
+        <h1>Meet us</h1>
+      </div>
+      <div class="personalCards">
+
+          <div class="personContainer enable-Left">
+              <div class="person card1">
+                <div class="title">
+                  <h3 class="name">Pablo Villamizar</h3>
+                  <h5 class="job">Backend developer</h5>
+                </div>
+                <img src="img/Pablo.webp" alt="Pablo Villamizar">
+                <div class="information">
+                  <div><a href="https://github.com/pablom58" target="_blank"><i class="fab fa-github"></i><span>pablom58</span></a></div>
+                  <div><a href="https://www.instagram.com/pablo.m58/" target="_blank"><i class="fab fa-instagram"></i><span>pablo_m58</span></a></div>
+                  <div><a href="mailto:pablomvillamizar@gmail.com"><i class="fab fa-google"></i><span>pablomvillamizar@gmail.com</span></a></div>
+                  <div><a href="https://www.linkedin.com/in/pablo-miguel-villamizar-s%C3%A1nchez-555356190/" target="_blank"><i class="fab fa-linkedin"></i><span>Pablo Miguel Villamizar Sanchez</span></a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="personContainer enable-Left">
+              <div class="person card2">
+                <div class="title">
+                  <h3 class="name">Daniel Salazar</h3>
+                  <h5 class="job">Frontend developer</h5>
+                </div>
+                <img src="img/DNL.webp" alt="Daniel Salazar">
+                <div class="information">
+                  <div><a href="https://github.com/DNLSalazar" target="_blank"><i class="fab fa-github"></i><span>DNLSalazar</span></a></div>
+                  <div><a href="https://www.linkedin.com/in/daniel-david-salazar-s%C3%A1nchez-60408b181/" target="_blank"><i class="fab fa-linkedin"></i><span>Daniel David Salazar Sánchez</span></a></div>
+                  <div><a href="mailto:dnlsalazar27@gmail.com"><i class="fab fa-google"></i><span>dnlsalazar27@gmail.com</span></a></div>
+                  <div><a href="https://twitter.com/DNLSalazar" target="_blank"><i class="fab fa-twitter"></i><span>DNLSalazar</span></a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="personContainer enable-right">
+              <div class="person">
+                  <div class="title">
+                    <h3 class="name">Diego Salazar</h3>
+                    <h5 class="job">Frontend developer</h5>
+                  </div>
+                  <img src="img/DG.webp" alt="Diego Salazar">
+                  <div class="information">
+                    <div><a href="https://github.com/DiegoSalazar27" target="_blank"><i class="fab fa-github"></i><span>DiegoSalazar27</span></a></div>
+                    <div><a href="https://www.linkedin.com/in/diego-salazar-sanchez-44a996166/" target="_blank"><i class="fab fa-linkedin"></i><span>Diego Salazar</span></a></div>
+                    <div><a href="mailto:diegosalazargm@gmail.com"><i class="fab fa-google"></i><span>diegosalazargm@gmail.com</span></a></div>
+                    <div><a href="https://twitter.com/DiegoSa51362432" target="_blank"><i class="fab fa-twitter"></i><span>@DiegoSalazar27_</span></a></div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="personContainer enable-right">
+              <div class="person">
+                  <div class="person card1">
+                    <div class="title">
+                      <h3 class="name">Edgar Guerrero</h3>
+                      <h5 class="job">Designer</h5>
+                    </div>
+                    <img src="img/Edgar David.webp" alt="Edgar Guerrero">
+                    <div class="information">
+                      <div><a href="https://www.behance.net/edgardguerrero" target="_blank"><i class="fab fa-behance"></i><span>Edgar David Guerrero</span></a></div>
+                      <div><a href="https://www.linkedin.com/in/edgar-guerrero-20a365190/" target="_blank"><i class="fab fa-linkedin"></i><span>Edgar Guerrero</span></a></div>
+                      <div><a href="mailto:edgar87012@gmail.com"><i class="fab fa-google"></i><span>edgar87012@gmail.com</span></a></div>
+                      <div><a href="https://twitter.com/DiegoSa51362432" target="_blank"><i class="fab fa-twitter"></i><span>@DiegoSalazar27_</span></a></div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      <a href="#footer" class="arrow"></a>
   </section>
 
-    <section class="contact">
-      <div class="iconRS">
-        <div class="content">
-          <i class="fab fa-instagram"></i>
-        </div>
-        <span class="border_top"></span>
-        <span class="border_right"></span>
-        <span class="border_bottom"></span>
-        <span class="border_left"></span>
+  <!-- <section id="contactus">
+
+    <div class="theFather">
+        <form class="contactForm" action="index.html" method="post" id="contatcForm">
+            <div class="basicInformationContainer">
+                <h1>Write us</h1>
+                <div class="inputContainer">
+                    <label for="name">Name</label>
+                    <input class="input" type="text" name="name" value="" id="name">
+                </div>
+
+                <div class="inputContainer">
+                    <label for="email">Email</label>
+                    <input class="input" type="email" name="email" value="" id="email">
+                </div>
+            </div>
+
+            <div class="textareaContainer">
+                <textarea class="textarea" name="name" placeholder="write something here"></textarea>
+                <input type="submit" value="Submit" id="submit">
+            </div>
+    </form>
+    </div>
+  </section> -->
+
+  <footer id="footer">
+
+    <div class="imageF">
+      <img src="img/SKD.webp" alt="SKD logo" class="logo" id="logoFooter">
+    </div>
+
+    <div class="contacCont">
+      <div class="contact" >
+        <p id="location">Venezuela, Táchira, La Grita.
+        </p>
       </div>
-      <div class="iconRS">
-        <div class="content">
-          <i class="fab fa-github"></i>
-        </div>
-        <span class="border_top"></span>
-        <span class="border_right"></span>
-        <span class="border_bottom"></span>
-        <span class="border_left"></span>
+      <div class="contact" id="another">
+        <p id="number">+58-4247353151</p>
       </div>
-      <div class="iconRS">
-        <div class="content">
-          <i class="fab fa-google"></i>
-        </div>
-        <span class="border_top"></span>
-        <span class="border_right"></span>
-        <span class="border_bottom"></span>
-        <span class="border_left"></span>
+      <div class="contact">
+        <p id="email">simplekoded@gmail.com</p>
       </div>
-      <div class="iconRS">
-        <div class="content">
-          <i class="fab fa-twitter"></i>
+      <div class="contact" id="Rs">
+        <div class="iconRS">
+          <div class="content">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <span class="border_top"></span>
+          <span class="border_right"></span>
+          <span class="border_bottom"></span>
+          <span class="border_left"></span>
         </div>
-        <span class="border_top"></span>
-        <span class="border_right"></span>
-        <span class="border_bottom"></span>
-        <span class="border_left"></span>
+        <div class="iconRS">
+          <div class="content">
+            <i class="fab fa-github"></i>
+          </div>
+          <span class="border_top"></span>
+          <span class="border_right"></span>
+          <span class="border_bottom"></span>
+          <span class="border_left"></span>
+        </div>
+        <div class="iconRS">
+          <div class="content">
+            <i class="fab fa-google"></i>
+          </div>
+          <span class="border_top"></span>
+          <span class="border_right"></span>
+          <span class="border_bottom"></span>
+          <span class="border_left"></span>
+        </div>
+        <div class="iconRS">
+          <div class="content">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <span class="border_top"></span>
+          <span class="border_right"></span>
+          <span class="border_bottom"></span>
+          <span class="border_left"></span>
+        </div>
       </div>
-    </section>
+    </div>
+    <div class="">
+
+    </div>
+  </footer>
 
 
-
-    <script src="https://kit.fontawesome.com/d46a14cee5.js"></script>
-    <script src="animations/myScrollAnimations.js"></script>
-    <script src="/javascript/javascript.js"></script>
+  <script src="https://kit.fontawesome.com/d46a14cee5.js"></script>
+  <script src="animations/myScrollAnimations.js"></script>
+  <script src="javascript/javascript.js"></script>
+  <script src="javascript/writingAnimation.js"></script>
 </body>
 </html>
