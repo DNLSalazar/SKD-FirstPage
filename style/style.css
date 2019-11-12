@@ -130,9 +130,11 @@ header {
     height: auto;
     width: 100%;
     /* linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), */
-    background-image: url(../img/SKDanimation.webp), linear-gradient(80deg, rgb(0, 0, 0), rgb(33, 33, 33));
+    /* rgba(34,34,34,1) 30% */
+     /* linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(33,33,33,1) 100%) */
+    background-image: url(../img/SKDanimation.webp), url(../img/fondo1.svg), linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
     background-position: center top;
-    background-size: auto 70%, 100%;
+    background-size: auto 70%, 100%, 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
@@ -179,7 +181,8 @@ header {
 
 #whyus{
   /* background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
-  background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--background) 100%);
+  /* background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--background) 100%); */
+  background-color: #f0f0f0;
 }
 
 #whyus div{
@@ -216,7 +219,7 @@ header {
     position: relative;
     /* background: linear-gradient(45deg, #89ff00 0%, #00bcd4 5%, rgb(90, 90, 90) 5%, rgb(90, 90, 90) 95%, #ff0000 95%, #ffc107 100%); */
     /* background: linear-gradient(45deg, #ffffff 0%, #fff 10%, #1a1a1a 10%, #1a1a1a 90%, #fff 90%, #fff 100%); */
-    background: linear-gradient(45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
+    /* background: linear-gradient(45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
 }
 
 #services h1{
@@ -326,7 +329,8 @@ header {
 /*-----------------------------------WORKS------------------------------------------*/
 
 #works{
-  background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
+  /* background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
+  background-color: #f0f0f0;
 }
 
 #works h1{
@@ -382,7 +386,7 @@ header {
   /* background: linear-gradient(-45deg, #ffc107 0%, #ff0000 5%, rgb(45, 45, 45) 5%, rgb(45, 45, 45) 95%, #00bcd4 95%, #89ff00 100%); */
 
   /* background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
-  background: linear-gradient(-45deg, var(--background) 0%, var(--background) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%);
+  /* background: linear-gradient(-45deg, var(--background) 0%, var(--background) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -812,30 +816,36 @@ transform: translateY(20px);
 /*-----------------------------------Icons---------------------------------*/
 
 footer {
+  background-color: rgb(33,33,33);
   width: 100%;
-  padding: 100px 3% 100px 5%;
+  padding: 1%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  height: 200px;
 }
 
-footer .imageF {
-  width: 30%;
+/* footer .imageF {
+  width: 10%;
   text-align: center;
   align-self: flex-start;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-}
+} */
 
-footer .imageF img{
-  margin-bottom: 80px;
+footer > img{
+  height: 100%;
+  width: auto;
+  max-width: 300px;
+  max-height: 200px;
 }
 
 footer .contacCont{
-  width: 70%;
+  /* width: 70%; */
+  flex-direction: column;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -844,9 +854,6 @@ footer .contacCont{
   position: relative;
   padding-left: 30px;
   color: white;
-  background-color: var(--background);
-  width: 35%;
-  min-height: 15vh;
 }
 
 footer .contacCont .contact:last-child{
@@ -855,15 +862,10 @@ footer .contacCont .contact:last-child{
   justify-content: space-between;
 }
 
-
-#another {
-  margin: 0 20px;
-}
-
-#logoFooter {
+/* #logoFooter {
   min-width: 200px;
   max-width: 300px;
-}
+} */
 
 #location::before {
   content: url(../img/icon-location.svg);
@@ -882,6 +884,17 @@ footer .contacCont .contact:last-child{
   position: absolute;
   left: 0;
 }
+
+#Rs{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  min-width: 220px;
+  width: 30%;
+}
+
 .iconRS {
     align-items: center;
     display: flex;
@@ -894,31 +907,27 @@ footer .contacCont .contact:last-child{
     cursor: pointer;
 }
 
-#Rs{
-  padding: 0;
-}
-
 .iconRS span {
-    background-color: #1280ce;
-    border-radius: 25px;
-    position: absolute;
-    transition: 0.5s ease;
+  background-color: var(--primary);
+  border-radius: 25px;
+  position: absolute;
+  transition: 0.5s ease;
 }
 
 .iconRS span:nth-child(even) {
-    height: 2px;
-    transform: scale(1, 1);
-    width: 50px;
+  height: 2px;
+  transform: scale(1, 1);
+  width: 50px;
 }
 
 .iconRS span:nth-child(odd) {
-    height: 50px;
-    transform: scale(1, 0);
-    width: 2px;
+  height: 50px;
+  transform: scale(1, 0);
+  width: 2px;
 }
 
 .iconRS:hover span:nth-child(even) {
-    transform: scale(0, 1);
+  transform: scale(0, 1);
 }
 
 .iconRS:hover span:nth-child(odd) {
@@ -1006,9 +1015,6 @@ footer .contacCont .contact:last-child{
 
     /*---------------------Footer----------------------*/
 
-    footer{
-      padding: 50px 5% 25px 5%;
-    }
 
     footer .imageF {
       width: 100%;
