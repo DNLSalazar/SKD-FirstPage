@@ -183,29 +183,58 @@ header {
   /* background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
   /* background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--background) 100%); */
   background-color: #f0f0f0;
+  justify-content: space-around;
 }
 
-#whyus div{
+#whyus > div{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  min-width: 45ch;
+  min-width: 40ch;
+  width: 20%;
   text-align: center;
   margin-top: 50px;
+  background-color: var(--background);
+  height: 20%;
+  min-height: 200px;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+#whyus > div::before{
+  content: "";
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  top: -75px;
+  width: 150px;
+  height: 150px;
+  position: absolute;
 }
 
 #whyus p{
-  width: 45ch;
+  width: 35ch;
 }
 
 #full{
   width: 100%;
 }
 
-#whyus div img{
+.circle > img{
   width: 100px;
+}
+
+.circle{
+  border-radius: 50%;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -65px;
+  width: 130px;
+  height: 130px;
 }
 
 
@@ -846,7 +875,7 @@ footer .contacCont{
   flex-direction: column;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
 }
 
@@ -898,12 +927,12 @@ footer .contacCont .contact:last-child{
 .iconRS {
     align-items: center;
     display: flex;
-    font-size: 30px;
-    height: 50px;
+    font-size: 40px;
+    height: 60px;
     justify-content: center;
     position: relative;
     text-align: center;
-    width: 50px;
+    width: 60px;
     cursor: pointer;
 }
 
@@ -917,11 +946,11 @@ footer .contacCont .contact:last-child{
 .iconRS span:nth-child(even) {
   height: 2px;
   transform: scale(1, 1);
-  width: 50px;
+  width: 60px;
 }
 
 .iconRS span:nth-child(odd) {
-  height: 50px;
+  height: 60px;
   transform: scale(1, 0);
   width: 2px;
 }
