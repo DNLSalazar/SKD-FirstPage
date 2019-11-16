@@ -468,8 +468,18 @@ header {
   flex-wrap: wrap;
 }
 
-.lnr{
-  color: black;
+.arrowCard{
+  color: var(--primary);
+  position: absolute;
+  cursor: pointer;
+  left: 10px;
+  font-size: 6em;
+  z-index: 5;
+}
+
+.next{
+  left: auto;
+  right: 10px;
 }
 
 .personalCards {
@@ -479,20 +489,37 @@ header {
 
   display: flex;
   flex-wrap: nowrap !important;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  /* position: relative; */
   z-index: 1;
 }
 
+/* .active{
+  position: relative !important;
+  right: 0;
+  left: 0;
+} */
+
+/* #prev{
+  position: absolute;
+  left: -45%;
+}
+
+#next{
+  position: absolute;
+  right: -45%;
+} */
+
 .personContainer {
   box-shadow: 0px 10px 20px 5px hsla(205, 0%, 0%, 1);
-  position: relative;
   transform-style: preserve-3d;
   transition: .5s ease-in-out;
   margin: 0;
   padding: 0;
   min-width: 350px;
   width: 350px;
+  margin: 0 175px;
   /* max-width: 350px; */
   overflow: hidden;
 }
@@ -1218,10 +1245,5 @@ footer .contacCont .contact:last-child{
 @media only screen and (max-width: 1400px) {
   .personContainer {
     transform: translate(0);
-    margin: 20px 50px;
-  }
-
-  .personalCards {
-    flex-wrap: wrap;
   }
 }

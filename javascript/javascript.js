@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
   	'use strict';
   	   var slides = document.querySelectorAll('.personContainer'),
   		 button = document.getElementById('button'),
-  		 arrows = document.querySelectorAll('.lnr'),
+  		 arrows = document.querySelectorAll('.arrowCard'),
   		 carouselCount = 0,
   		 scrollInterval,
   		 interval = 10000;
@@ -31,7 +31,7 @@ window.addEventListener("load", function() {
   	arrows[0].addEventListener('click', function (e) {
   		e = e || window.event;
   		e.preventDefault();
-  		carouselCount -= 100;
+  		carouselCount += 200;
   		slider();
   		if (e.type !== 'autoClick') {
   			clearInterval(scrollInterval);
@@ -44,7 +44,7 @@ window.addEventListener("load", function() {
   	function sliderEvent(e) {
   		e = e || window.event;
   		e.preventDefault();
-  		carouselCount += 100;
+  		carouselCount -= 200;
   		slider();
   		if (e.type !== "autoClick") {
   			clearInterval(scrollInterval);
@@ -54,10 +54,10 @@ window.addEventListener("load", function() {
 
   	function slider() {
   		switch (carouselCount) {
-  			case -100:
+  			case -400:
   				carouselCount = 0;
   				break;
-  			case 300:
+  			case 400:
   				carouselCount = 0;
   				break;
   			default:
@@ -65,7 +65,7 @@ window.addEventListener("load", function() {
   		}
   		console.log(carouselCount);
   		for (var i = 0; i < slides.length; i += 1) {
-  			slides[i].setAttribute('style', 'transform:translateX(-' + carouselCount + '%)');
+  			slides[i].setAttribute('style', 'transform:translateX(' + carouselCount + '%)');
   		}
   	}
 
