@@ -19,19 +19,21 @@ window.addEventListener("load", function() {
     // scrollindicator(heightToScroll);
     // window.addEventListener("scroll", FormAnimationTrigger);
 
-      (function () {
+  (function () {
   	'use strict';
   	   var slides = document.querySelectorAll('.personContainer'),
-  		 button = document.getElementById('button'),
   		 arrows = document.querySelectorAll('.arrowCard'),
-  		 carouselCount = 0,
+  		 // carouselCount = 200,
+       carouselCount = 0,
   		 scrollInterval,
-  		 interval = 10000;
+  		 interval = 15000,
+       count = 55;
 
+      slider()
   	arrows[0].addEventListener('click', function (e) {
   		e = e || window.event;
   		e.preventDefault();
-  		carouselCount += 200;
+  		carouselCount += count;
   		slider();
   		if (e.type !== 'autoClick') {
   			clearInterval(scrollInterval);
@@ -44,7 +46,7 @@ window.addEventListener("load", function() {
   	function sliderEvent(e) {
   		e = e || window.event;
   		e.preventDefault();
-  		carouselCount -= 200;
+  		carouselCount -= count;
   		slider();
   		if (e.type !== "autoClick") {
   			clearInterval(scrollInterval);
@@ -53,19 +55,14 @@ window.addEventListener("load", function() {
   	}
 
   	function slider() {
-  		switch (carouselCount) {
-  			case -400:
-  				carouselCount = 0;
-  				break;
-  			case 400:
-  				carouselCount = 0;
-  				break;
-  			default:
-  				break;
-  		}
-  		console.log(carouselCount);
-  		for (var i = 0; i < slides.length; i += 1) {
-  			slides[i].setAttribute('style', 'transform:translateX(' + carouselCount + '%)');
+      if (carouselCount < -100) {
+        carouselCount = count;
+      }
+      if (carouselCount > 100) {
+        carouselCount = -count;
+      }
+  		for (let i = 0; i < slides.length; i++) {
+  			slides[i].setAttribute('style', 'transform:translateX(' + carouselCount + 'vw)');
   		}
   	}
 
@@ -77,7 +74,6 @@ window.addEventListener("load", function() {
 
   	// set timing of dispatch click events
   	scrollInterval = setInterval(autoScroll, interval);
-
   })();
 });
 

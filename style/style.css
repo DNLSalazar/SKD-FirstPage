@@ -195,8 +195,12 @@ header {
   justify-content: space-around;
   align-items: flex-start;
   z-index: 1;
-  min-height: 1500px;
+  min-height: 100vh;
   padding-top: 80px;
+}
+
+#whyus .titles{
+  margin-bottom: 100px;
 }
 
 #whyus > .whyus{
@@ -209,9 +213,9 @@ header {
   min-width: 40ch;
   width: 20%;
   text-align: center;
-  margin-top: 50px;
+  margin-bottom: 180px;
   background-color: var(--background);
-  height: 20%;
+  /* height: 20%; */
   min-height: 180px;
   position: relative;
   padding-bottom: 40px;
@@ -463,8 +467,6 @@ header {
   /* background: linear-gradient(-45deg, var(--secondary) 0%, var(--secondary) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
   /* background: linear-gradient(-45deg, var(--background) 0%, var(--background) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -495,22 +497,6 @@ header {
   z-index: 1;
 }
 
-/* .active{
-  position: relative !important;
-  right: 0;
-  left: 0;
-} */
-
-/* #prev{
-  position: absolute;
-  left: -45%;
-}
-
-#next{
-  position: absolute;
-  right: -45%;
-} */
-
 .personContainer {
   box-shadow: 0px 10px 20px 5px hsla(205, 0%, 0%, 1);
   transform-style: preserve-3d;
@@ -519,7 +505,7 @@ header {
   padding: 0;
   min-width: 350px;
   width: 350px;
-  margin: 0 175px;
+  margin: 0 15%;
   /* max-width: 350px; */
   overflow: hidden;
 }
@@ -566,7 +552,7 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  z-index: 6;
+  z-index: 1;
 }
 
 .person::after, .person::before, .cardFooter::after, .cardFooter::before{
@@ -607,23 +593,25 @@ header {
     width: 60%;
     font-size: 1.8em;
     position: relative;
+    overflow: visible;
 }
 
-.person .information div{
+/* .person .information div{
   position: relative;
-}
+} */
 
 .information div span{
   background-color: #f0f0f0;
   border-radius: 5px;
-  bottom: 90%;
-  clip-path: inset(100% 100% 0% 0%);
+  bottom: 60px;
+  clip-path: inset(100% 0% 100% 0%);
   color: var(--primary);
   display: block;
   font-size: .6em;
-  max-height: 22px;
+  max-height: 25px;
   white-space: nowrap;
-  left: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
   overflow: hidden;
   position: absolute;
   padding:  0 4px 0;
@@ -639,7 +627,7 @@ header {
   right: 100%;
   width: 25px;
   height: 25px;
-  clip-path: polygon(50% 0, 50% 50%, 100% 0);
+  clip-path: polygon(50% 50%, 50% 50%, 100% 0);
   z-index: 2;
 }
 
@@ -704,7 +692,7 @@ header {
   display: block;
 } */
 
-.enable-Left {
+/* .enable-Left {
     transform-origin: left center;
     transform: perspective(500px) rotatey(45deg) translatex(120px);
 }
@@ -712,17 +700,7 @@ header {
 .enable-right {
     transform-origin: right center;
     transform: perspective(500px) rotatey(-45deg) translatex(-120px);
-}
-
-/*---------------------------------------------Cards models----------------------------------------*/
-
-/* .card1 {
-    /* background: linear-gradient(45deg, rgb(255, 255, 255) 45%, hsl(175, 100%, 25%) 45%, hsl(175, 100%, 25%) 50%, hsl(175, 96%, 60%) 50%, #36fbeb 100%);
-}
-
-.card2 {
-    /* background: linear-gradient(45deg, rgba(255,255,255,1) 45%, rgba(177,0,0,1) 45%, rgba(177,0,0,1) 50%, rgba(255,0,0,1) 50%, rgba(255,0,0,1) 100%);
-}*/
+} */
 
 /*----------------------------------------Contact Form----------------------------------------------------------*/
 
@@ -1008,6 +986,7 @@ footer .contacCont{
   /* align-items: center; */
   flex-wrap: wrap;
   min-width: 300px;
+  padding-left: 10px;
 }
 
 .contact {
@@ -1150,23 +1129,6 @@ footer .contacCont .contact:last-child{
 
     /*------------------------------PERSONAL--------------------------------------*/
 
-    .personalCards {
-      width: auto;
-      height: auto;
-      padding: 100px 50px;
-      flex-wrap: wrap;
-    }
-
-    .personContainer {
-      transform: translatey(0);
-      margin: 25px;
-    }
-
-    .personContainer .title{
-      color: black;
-    }
-
-
     /*------------------------------CONTACT US--------------------------------------*/
 
     .contactForm {
@@ -1186,18 +1148,6 @@ footer .contacCont .contact:last-child{
     }
 
     /*------------------------------PERSONAL--------------------------------------*/
-    .personalCards {
-        width: 100%;
-        padding: 0;
-    }
-
-    .personContainer {
-        width: 90%;
-        max-width: 350px;
-    }
-    .person {
-        width: 100%;
-    }
 
     /*------------------------------CONTACT US--------------------------------------*/
     .theFather {
@@ -1242,8 +1192,8 @@ footer .contacCont .contact:last-child{
     }
 }
 
-@media only screen and (max-width: 1400px) {
-  .personContainer {
-    transform: translate(0);
+@media only screen and (max-width: 400px) {
+  .personContainer{
+    transform: scale(.8);
   }
 }
