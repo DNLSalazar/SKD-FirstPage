@@ -1,6 +1,7 @@
 
 // var scroll = document.getElementById("scrollIndicator");
 var body = document.getElementsByTagName("body")[0];
+var root = document.documentElement;
 
 //Variables para animación del form
 // var i = 0;
@@ -21,32 +22,30 @@ window.addEventListener("load", function() {
 
   (function () {
   	'use strict';
-  	   var slides = document.querySelectorAll('.personContainer'),
-  		 arrows = document.querySelectorAll('.arrowCard'),
-  		 // carouselCount = 200,
-       carouselCount = 0,
-  		 scrollInterval,
-  		 interval = 15000,
-       count = 55;
+	   var slides = document.querySelectorAll('.personContainer'),
+		 arrows = document.querySelectorAll('.arrowCard'),
+		 // carouselCount = 200,
+     carouselCount = 0,
+		 scrollInterval,
+		 interval = 15000,
+     count = 1,
+     condition;
 
-      slider()
-  	arrows[0].addEventListener('click', function (e) {
-  		e = e || window.event;
-  		e.preventDefault();
-  		carouselCount += count;
-  		slider();
-  		if (e.type !== 'autoClick') {
-  			clearInterval(scrollInterval);
-  			scrollInterval = setInterval(autoScroll, interval);
-  		}
-  	});
-  	arrows[1].addEventListener('click', sliderEvent);
-  	arrows[1].addEventListener('autoClick', sliderEvent);
+     arrows[0].addEventListener('click', sliderEvent);
+ 	   arrows[1].addEventListener('click', sliderEvent);
+     arrows[1].addEventListener('autoClick', sliderEvent);
 
   	function sliderEvent(e) {
-  		e = e || window.event;
-  		e.preventDefault();
-  		carouselCount -= count;
+      var mediaQuery = window.matchMedia("(max-width: 750px)");
+
+      // count = mediaQuery.matches ? 100 : 55;
+      count =  mediaQuery.matches ? 1 : 50
+      condition = mediaQuery.matches ? 4 : 100
+      console.log(count, condition)
+  		e = e || window.event
+  		e.preventDefault()
+      e.target.classList[1] === "prev" ? carouselCount += count : carouselCount -= count
+      console.log(carouselCount);
   		slider();
   		if (e.type !== "autoClick") {
   			clearInterval(scrollInterval);
@@ -55,15 +54,14 @@ window.addEventListener("load", function() {
   	}
 
   	function slider() {
-      if (carouselCount < -100) {
-        carouselCount = count;
+      if (carouselCount < -(condition)) {
+        carouselCount = 0;
       }
-      if (carouselCount > 100) {
-        carouselCount = -count;
+      if (carouselCount > 0) {
+        carouselCount = -(condition);
       }
-  		for (let i = 0; i < slides.length; i++) {
-  			slides[i].setAttribute('style', 'transform:translateX(' + carouselCount + 'vw)');
-  		}
+      // root.style.setProperty("--carousel", carouselCount + "vw")
+      root.style.setProperty("--carousel", carouselCount)
   	}
 
   	// create new Event to dispatch click for auto scroll

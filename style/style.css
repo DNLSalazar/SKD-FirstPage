@@ -7,6 +7,7 @@
   --primary: hsl(200, 85%, 44%);
   --secondary: white;
   --background: hsl(0, 0%, 10%);
+  --carousel: 0;
 }
 
 * {
@@ -197,6 +198,7 @@ header {
   z-index: 1;
   min-height: 100vh;
   padding-top: 80px;
+  overflow: hidden;
 }
 
 #whyus .titles{
@@ -468,6 +470,7 @@ header {
   /* background: linear-gradient(-45deg, var(--background) 0%, var(--background) var(--px-backgroind), var(--background) calc(0% + var(--px-backgroind)), var(--background) calc(100% - var(--px-backgroind)), var(--secondary) calc(100% - var(--px-backgroind)), var(--secondary) 100%); */
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .arrowCard{
@@ -475,13 +478,15 @@ header {
   position: absolute;
   cursor: pointer;
   left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 6em;
   z-index: 5;
 }
 
 .next{
-  left: auto;
   right: 10px;
+  left: initial;
 }
 
 .personalCards {
@@ -491,9 +496,9 @@ header {
 
   display: flex;
   flex-wrap: nowrap !important;
-  justify-content: space-around;
-  align-items: center;
-  /* position: relative; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
   z-index: 1;
 }
 
@@ -505,7 +510,8 @@ header {
   padding: 0;
   min-width: 350px;
   width: 350px;
-  margin: 0 15%;
+  margin: 40px 12%;
+  transform: translateX(calc(var(--carousel) * 1vw));
   /* max-width: 350px; */
   overflow: hidden;
 }
@@ -596,10 +602,6 @@ header {
     overflow: visible;
 }
 
-/* .person .information div{
-  position: relative;
-} */
-
 .information div span{
   background-color: #f0f0f0;
   border-radius: 5px;
@@ -638,7 +640,6 @@ header {
 }
 
 .personContainer:hover {
-    transform: translatey(0px);
     box-shadow: 0px 10px 20px 5px hsla(205, 85%, 45%, 1);
 }
 
@@ -1192,8 +1193,41 @@ footer .contacCont .contact:last-child{
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 750px) {
   .personContainer{
-    transform: scale(.8);
+    transform-origin: center;
+    /* transform: scale(.91427) translateX(calc(var(--carousel) / 100 * 320px )); */
+    transform: scale(.91427) translateX(0);
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+
+    box-shadow: none;
+  }
+
+  .active{
+    opacity: 1;
+  }
+
+  .personalCards{
+    /* padding: 10%; */
+    align-items: center;
+    justify-content: flex-start;
+    width: 320px;
+    overflow: hidden;
+    position: static;
+  }
+
+  .arrowCard{
+    width: 40px;
+    height: 40px;
+    bottom: 0px;
+    top: 90%;
+    left: 40px;
+  }
+
+  .next{
+    left: initial !important;
+    right: 50px;
   }
 }
