@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="animations/myScrollAnimations.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/writingAnimation.css">
+
     <title>Simple Kode Design | Web development team</title>
 </head>
 <body>
@@ -22,12 +23,13 @@
         <!-- <div class="titleDiv">
             <h1 class="myAnimatable" my-animation="fade right"></h1>
         </div> -->
+        <img src="img/SKDanimation.webp" alt="SKD Gif">
 
         <div class="weDiv">
             <h3 class="myAnimatable" my-animation="bounce left">Make it <span id="word"></span></h3>
         </div>
 
-        <a href="#whyus" class="arrow"></a>
+        <a href="#services" class="arrow"></a>
     </section>
 
     <section class="container" id="services">
@@ -77,29 +79,46 @@
               </div>
           </div>
         </div>
-        <a href="#personal" class="arrow"></a>
     </section>
 
     <section class="container" id="whyus">
-      <div id="full">
-        <img src="img/Solution.svg" alt="Solution">
+
+      <div class="titles">
+        <h1>Why us?</h1>
+      </div>
+
+      <div class="whyus">
+        <span class="circle">
+          <img src="img/Solution.svg" alt="Solution">
+        </span>
         <h1>Every problem has a simple solution</h1> <!--You dream it, we build it for you-->
         <!-- We are a young group of web development based on teamwork and continuos learning ready to -->
-        <p>We can make modern, minimalist and elegant solutions.</p>
+        <div class="backCard">
+          <p>We can make modern, minimalist and elegant solutions.</p>
+        </div>
       </div>
-      <div>
-        <img src="img/Project.svg" alt="Project">
-        <h2>All kind of projects</h2>
 
-        <p>Since small websites to full platforms with updated tools</p>
+      <div class="whyus">
+        <span class="circle">
+          <img src="img/Project.svg" alt="Project">
+        </span>
+        <h1>All kind of projects</h1>
+
+        <div class="backCard">
+          <p>Since small websites to full platforms with updated tools</p>
+        </div>
       </div>
-      <div>
-        <img src="img/Confort.svg" alt="Confort">
+
+      <div class="whyus">
+        <div class="circle">
+          <img src="img/Confort.svg" alt="Confort">
+        </div>
         <h2>We search your confort</h2>
 
-        <p>Friendly and good user experience</p>
+        <div class="backCard">
+          <p>Friendly and good user experience</p>
+        </div>
       </div>
-      <a href="#services" class="arrow"></a>
     </section>
 
   <!-- <section class="container" id="works">
@@ -121,79 +140,104 @@
   </section> -->
 
   <section class="container" id="personal">
+
       <div class="titles">
         <h1>Meet us</h1>
       </div>
-      <div class="personalCards">
 
-          <div class="personContainer enable-Left">
+      <div class="personalCards" id="carousel">
+
+        <div class="arrowCard prev">
+          <
+        </div>
+
+        <div class="personContainer active">
+          <div class="cardHeader">
+            <img src="img/Pablo.webp" alt="Pablo Villamizar">
+          </div>
+          <div class="person card1">
+            <div class="title">
+              <h3 class="name">Pablo Villamizar</h3>
+            </div>
+            <div class="information">
+              <div><a href="https://github.com/pablom58" target="_blank"><i class="fab fa-github"></i><span>pablom58</span></a></div>
+              <div><a href="https://www.instagram.com/pablo.m58/" target="_blank"><i class="fab fa-instagram"></i><span>pablo_m58</span></a></div>
+              <div><a href="mailto:pablomvillamizar@gmail.com"><i class="fab fa-google"></i><span>pablomvillamizar@gmail.com</span></a></div>
+              <div><a href="https://www.linkedin.com/in/pablo-miguel-villamizar-s%C3%A1nchez-555356190/" target="_blank"><i class="fab fa-linkedin"></i><span>Pablo Miguel Villamizar Sanchez</span></a></div>
+            </div>
+            <div class="cardFooter">
+              <h5 class="job">Backend developer</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="personContainer">
+          <div class="cardHeader">
+            <img src="img/DNL.webp" alt="Daniel Salazar">
+          </div>
+          <div class="person card2">
+            <div class="title">
+              <h3 class="name">Daniel Salazar</h3>
+            </div>
+            <div class="information">
+              <div><a href="https://github.com/DNLSalazar" target="_blank"><i class="fab fa-github"></i><span>DNLSalazar</span></a></div>
+              <div><a href="https://www.linkedin.com/in/daniel-david-salazar-s%C3%A1nchez-60408b181/" target="_blank"><i class="fab fa-linkedin"></i><span>Daniel David Salazar Sánchez</span></a></div>
+              <div><a href="mailto:dnlsalazar27@gmail.com"><i class="fab fa-google"></i><span>dnlsalazar27@gmail.com</span></a></div>
+              <div><a href="https://twitter.com/DNLSalazar" target="_blank"><i class="fab fa-twitter"></i><span>DNLSalazar</span></a></div>
+            </div>
+            <div class="cardFooter">
+              <h5 class="job">Frontend developer</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="personContainer">
+          <div class="cardHeader">
+            <img src="img/Edgar David.webp" alt="Edgar Guerrero">
+          </div>
+          <div class="person">
               <div class="person card1">
                 <div class="title">
-                  <h3 class="name">Pablo Villamizar</h3>
-                  <h5 class="job">Backend developer</h5>
+                  <h3 class="name">Edgar Guerrero</h3>
                 </div>
-                <img src="img/Pablo.webp" alt="Pablo Villamizar">
                 <div class="information">
-                  <div><a href="https://github.com/pablom58" target="_blank"><i class="fab fa-github"></i><span>pablom58</span></a></div>
-                  <div><a href="https://www.instagram.com/pablo.m58/" target="_blank"><i class="fab fa-instagram"></i><span>pablo_m58</span></a></div>
-                  <div><a href="mailto:pablomvillamizar@gmail.com"><i class="fab fa-google"></i><span>pablomvillamizar@gmail.com</span></a></div>
-                  <div><a href="https://www.linkedin.com/in/pablo-miguel-villamizar-s%C3%A1nchez-555356190/" target="_blank"><i class="fab fa-linkedin"></i><span>Pablo Miguel Villamizar Sanchez</span></a></div>
+                  <div><a href="https://www.behance.net/edgardguerrero" target="_blank"><i class="fab fa-behance"></i><span>Edgar David Guerrero</span></a></div>
+                  <div><a href="https://www.linkedin.com/in/edgar-guerrero-20a365190/" target="_blank"><i class="fab fa-linkedin"></i><span>Edgar Guerrero</span></a></div>
+                  <div><a href="mailto:edgar87012@gmail.com"><i class="fab fa-google"></i><span>edgar87012@gmail.com</span></a></div>
+                  <div><a href="https://twitter.com/DiegoSa51362432" target="_blank"><i class="fab fa-twitter"></i><span>@DiegoSalazar27_</span></a></div>
+                </div>
+                <div class="cardFooter">
+                  <h5 class="job">Designer</h5>
                 </div>
               </div>
           </div>
+        </div>
 
-          <div class="personContainer enable-Left">
-              <div class="person card2">
-                <div class="title">
-                  <h3 class="name">Daniel Salazar</h3>
-                  <h5 class="job">Frontend developer</h5>
-                </div>
-                <img src="img/DNL.webp" alt="Daniel Salazar">
-                <div class="information">
-                  <div><a href="https://github.com/DNLSalazar" target="_blank"><i class="fab fa-github"></i><span>DNLSalazar</span></a></div>
-                  <div><a href="https://www.linkedin.com/in/daniel-david-salazar-s%C3%A1nchez-60408b181/" target="_blank"><i class="fab fa-linkedin"></i><span>Daniel David Salazar Sánchez</span></a></div>
-                  <div><a href="mailto:dnlsalazar27@gmail.com"><i class="fab fa-google"></i><span>dnlsalazar27@gmail.com</span></a></div>
-                  <div><a href="https://twitter.com/DNLSalazar" target="_blank"><i class="fab fa-twitter"></i><span>DNLSalazar</span></a></div>
-                </div>
+        <div class="personContainer">
+          <div class="cardHeader">
+            <img src="img/DG.webp" alt="Diego Salazar">
+          </div>
+          <div class="person">
+              <div class="title">
+                <h3 class="name">Diego Salazar</h3>
+              </div>
+              <div class="information">
+                <div><a href="https://github.com/DiegoSalazar27" target="_blank"><i class="fab fa-github"></i><span>DiegoSalazar27</span></a></div>
+                <div><a href="https://www.linkedin.com/in/diego-salazar-sanchez-44a996166/" target="_blank"><i class="fab fa-linkedin"></i><span>Diego Salazar</span></a></div>
+                <div><a href="mailto:diegosalazargm@gmail.com"><i class="fab fa-google"></i><span>diegosalazargm@gmail.com</span></a></div>
+                <div><a href="https://twitter.com/DiegoSa51362432" target="_blank"><i class="fab fa-twitter"></i><span>@DiegoSalazar27_</span></a></div>
+              </div>
+              <div class="cardFooter">
+                <h5 class="job">Frontend developer</h5>
               </div>
           </div>
+        </div>
 
-          <div class="personContainer enable-right">
-              <div class="person">
-                  <div class="title">
-                    <h3 class="name">Diego Salazar</h3>
-                    <h5 class="job">Frontend developer</h5>
-                  </div>
-                  <img src="img/DG.webp" alt="Diego Salazar">
-                  <div class="information">
-                    <div><a href="https://github.com/DiegoSalazar27" target="_blank"><i class="fab fa-github"></i><span>DiegoSalazar27</span></a></div>
-                    <div><a href="https://www.linkedin.com/in/diego-salazar-sanchez-44a996166/" target="_blank"><i class="fab fa-linkedin"></i><span>Diego Salazar</span></a></div>
-                    <div><a href="mailto:diegosalazargm@gmail.com"><i class="fab fa-google"></i><span>diegosalazargm@gmail.com</span></a></div>
-                    <div><a href="https://twitter.com/DiegoSa51362432" target="_blank"><i class="fab fa-twitter"></i><span>@DiegoSalazar27_</span></a></div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="personContainer enable-right">
-              <div class="person">
-                  <div class="person card1">
-                    <div class="title">
-                      <h3 class="name">Edgar Guerrero</h3>
-                      <h5 class="job">Designer</h5>
-                    </div>
-                    <img src="img/Edgar David.webp" alt="Edgar Guerrero">
-                    <div class="information">
-                      <div><a href="https://www.behance.net/edgardguerrero" target="_blank"><i class="fab fa-behance"></i><span>Edgar David Guerrero</span></a></div>
-                      <div><a href="https://www.linkedin.com/in/edgar-guerrero-20a365190/" target="_blank"><i class="fab fa-linkedin"></i><span>Edgar Guerrero</span></a></div>
-                      <div><a href="mailto:edgar87012@gmail.com"><i class="fab fa-google"></i><span>edgar87012@gmail.com</span></a></div>
-                      <div><a href="https://twitter.com/DiegoSa51362432" target="_blank"><i class="fab fa-twitter"></i><span>@DiegoSalazar27_</span></a></div>
-                    </div>
-                  </div>
-              </div>
-          </div>
+        <div class="arrowCard next">
+          >
+        </div>
 
       </div>
-      <a href="#footer" class="arrow"></a>
   </section>
 
   <!-- <section id="contactus">
@@ -223,69 +267,70 @@
 
   <footer id="footer">
 
-    <div class="imageF">
+    <!-- <h3>Contact us</h3> -->
+
+    <!-- <div class="imageF"> -->
       <img src="img/SKD.webp" alt="SKD logo" class="logo" id="logoFooter">
-    </div>
+    <!-- </div> -->
 
     <div class="contacCont">
+      <h3>Contact us:</h3>
       <div class="contact" >
         <p id="location">Venezuela, Táchira, La Grita.
         </p>
       </div>
       <div class="contact" id="another">
         <p id="number">+58-4247353151</p>
+        <p>+58-4126914774</p>
       </div>
       <div class="contact">
         <p id="email">simplekoded@gmail.com</p>
       </div>
-      <div class="contact" id="Rs">
-        <div class="iconRS">
-          <div class="content">
-            <i class="fab fa-instagram"></i>
-          </div>
-          <span class="border_top"></span>
-          <span class="border_right"></span>
-          <span class="border_bottom"></span>
-          <span class="border_left"></span>
-        </div>
-        <div class="iconRS">
-          <div class="content">
-            <i class="fab fa-github"></i>
-          </div>
-          <span class="border_top"></span>
-          <span class="border_right"></span>
-          <span class="border_bottom"></span>
-          <span class="border_left"></span>
-        </div>
-        <div class="iconRS">
-          <div class="content">
-            <i class="fab fa-google"></i>
-          </div>
-          <span class="border_top"></span>
-          <span class="border_right"></span>
-          <span class="border_bottom"></span>
-          <span class="border_left"></span>
-        </div>
-        <div class="iconRS">
-          <div class="content">
-            <i class="fab fa-twitter"></i>
-          </div>
-          <span class="border_top"></span>
-          <span class="border_right"></span>
-          <span class="border_bottom"></span>
-          <span class="border_left"></span>
-        </div>
-      </div>
     </div>
-    <div class="">
-
+    <div id="Rs">
+      <div class="iconRS">
+        <div class="content">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <span class="border_top"></span>
+        <span class="border_right"></span>
+        <span class="border_bottom"></span>
+        <span class="border_left"></span>
+      </div>
+      <div class="iconRS">
+        <div class="content">
+          <i class="fab fa-github"></i>
+        </div>
+        <span class="border_top"></span>
+        <span class="border_right"></span>
+        <span class="border_bottom"></span>
+        <span class="border_left"></span>
+      </div>
+      <div class="iconRS">
+        <div class="content">
+          <i class="fab fa-google"></i>
+        </div>
+        <span class="border_top"></span>
+        <span class="border_right"></span>
+        <span class="border_bottom"></span>
+        <span class="border_left"></span>
+      </div>
+      <div class="iconRS">
+        <div class="content">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <span class="border_top"></span>
+        <span class="border_right"></span>
+        <span class="border_bottom"></span>
+        <span class="border_left"></span>
+      </div>
     </div>
   </footer>
 
 
   <script src="https://kit.fontawesome.com/d46a14cee5.js"></script>
   <script src="animations/myScrollAnimations.js"></script>
-  <script src="javascript/javascript.js"></script>
   <script src="javascript/writingAnimation.js"></script>
+  <script src="javascript/javascript.js"></script>
 </body>
 </html>
