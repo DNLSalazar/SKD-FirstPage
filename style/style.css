@@ -490,15 +490,17 @@ header {
 }
 
 .personalCards {
-  width: 100%;
+  width: 80%;
   min-height: 580px;
   height: auto;
+  max-width: 1500px;
 
   display: flex;
   flex-wrap: nowrap !important;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
+  /* justify-content: center;
+  align-items: flex-start; */
+  /* position: relative; */
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -565,16 +567,17 @@ header {
   content: "";
   position: absolute;
   left: -12%;
-  top: -35px;
+  top: -8%;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 22.85%;
+  height: 22.85%;
   background-color: var(--background);
 }
 
 .person::after, .cardFooter::before{
   left: initial;
-  right: -13%;
+  right: -12%;
+  z-index: 0;
 }
 
 .person .title{
@@ -584,6 +587,7 @@ header {
   transform: translateY(-50%);
   width: 80%;
   border-radius: 25px;
+  z-index: 1;
 }
 
 .person h3, .person h5 {
@@ -663,6 +667,7 @@ header {
 
 .cardFooter::after, .cardFooter::before{
   background-color: var(--primary);
+  height: 80px;
   top: -13px;
   left: -10%;
 }
@@ -680,12 +685,12 @@ header {
 .cardFooter > h5:before{
   content: "";
   background-color: var(--background);
-  width: 284px;
+  width: 81.14%;
   border-radius: 25px;
   height: 50px;
   position: absolute;
   top: -32px;
-  left: 33px;
+  left: 9.42%;
   z-index: 1;
 }
 
@@ -1193,20 +1198,15 @@ footer .contacCont .contact:last-child{
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
   .personContainer{
-    transform-origin: center;
-    /* transform: scale(.91427) translateX(calc(var(--carousel) / 100 * 320px )); */
-    transform: scale(.91427) translateX(0);
+    /* transform-origin: center; */
+    transform: translateX(calc(var(--carousel) / 100 * 320px ));
     margin: 0;
-    position: absolute;
-    opacity: 0;
+    min-width: 320px;
+    width: 320px;
 
     box-shadow: none;
-  }
-
-  .active{
-    opacity: 1;
   }
 
   .personalCards{
@@ -1215,7 +1215,7 @@ footer .contacCont .contact:last-child{
     justify-content: flex-start;
     width: 320px;
     overflow: hidden;
-    position: static;
+    position: relative;
   }
 
   .arrowCard{

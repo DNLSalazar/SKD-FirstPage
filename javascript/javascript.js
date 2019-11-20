@@ -39,8 +39,8 @@ window.addEventListener("load", function() {
       var mediaQuery = window.matchMedia("(max-width: 750px)");
 
       // count = mediaQuery.matches ? 100 : 55;
-      count =  mediaQuery.matches ? 1 : 50
-      condition = mediaQuery.matches ? 4 : 100
+      count =  mediaQuery.matches ? 100 : 40
+      condition = mediaQuery.matches ? 300 : 80
       console.log(count, condition)
   		e = e || window.event
   		e.preventDefault()
