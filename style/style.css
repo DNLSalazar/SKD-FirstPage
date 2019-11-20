@@ -1215,8 +1215,7 @@ footer .contacCont .contact:last-child{
 
   .personalCards{
     /* padding: 10%; */
-    align-items: center;
-    justify-content: flex-start;
+    grid-template-columns: 100% 100% 100% 100%;
     width: 320px;
     overflow: hidden;
     position: relative;
