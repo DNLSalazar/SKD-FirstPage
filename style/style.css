@@ -258,10 +258,11 @@ header {
 }
 
 .backCard{
+  padding: 25px 15px;
   background-color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   transform-origin: top;
   position: absolute;
   width: 95%;
