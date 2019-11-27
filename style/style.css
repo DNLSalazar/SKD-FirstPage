@@ -54,7 +54,7 @@ header {
 
 .arrow{
   position: absolute;
-  bottom: 70px;
+  bottom: 55px;
   right: calc(50% - 20px);
   border-right: 3px solid var(--primary);
   border-bottom: 3px solid var(--primary);
@@ -73,8 +73,6 @@ header {
   right: 4px;
   border-right: 3px solid var(--primary);
   border-bottom: 3px solid var(--primary);
-  /* transform: rotateZ(45deg); */
-  /* animation: arrows 2.3s ease-in infinite 1.5s; */
   width: 18px;
   height: 18px;
 }
@@ -86,8 +84,6 @@ header {
   right: -10px;
   border-right: 3px solid var(--primary);
   border-bottom: 3px solid var(--primary);
-  /* transform: rotateZ(45deg); */
-  /* animation: arrows 2.3s ease infinite 1.7s; */
   width: 17px;
   height: 17px;
 }
@@ -270,13 +266,10 @@ header {
   bottom: 0px;
   transition: .5s all ease;
   color: black;
-  /* opacity: .99; */
-  /* transform: scale(1,0); */
   z-index: -1;
 }
 
 #whyus > .whyus:hover > .backCard{
-  /* transform: scale(1,1); */
   transform: translateY(100%);
 }
 
@@ -353,10 +346,10 @@ header {
   align-items: center;
   justify-content: center;
   transition: .5s all ease !important;
-  z-index: 2;
-
-  top: 0;
   left: 0;
+  top: 0;
+
+  z-index: 2;
 }
 
 .card-body{
@@ -365,7 +358,7 @@ header {
   position: absolute;
   background-color: var(--background);
   color: white;
-  box-shadow: 0px 35px 19px 20px hsla(0, 0%, 0%, .5);
+  /* box-shadow: 0px 35px 19px 20px hsla(0, 0%, 0%, .5); */
   transition: .5s all ease;
   z-index: -1;
 
@@ -505,6 +498,14 @@ header {
   /* position: relative; */
   overflow: hidden;
   z-index: 1;
+}
+
+.cardContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .personContainer {
@@ -1205,8 +1206,8 @@ footer .contacCont .contact:last-child{
 @media only screen and (max-width: 800px) {
   .personContainer{
     /* transform-origin: center; */
-    transform: translateX(calc(var(--carousel) / 100 * 320px ));
-    margin: 0;
+    transform: translateX(calc(var(--carousel) * 1vw ));
+    /* margin: 0; */
     min-width: 320px;
     width: 320px;
 
@@ -1216,9 +1217,9 @@ footer .contacCont .contact:last-child{
   .personalCards{
     /* padding: 10%; */
     grid-template-columns: 100% 100% 100% 100%;
-    width: 320px;
     overflow: hidden;
     position: relative;
+    width: 100%;
   }
 
   .arrowCard{
