@@ -41,11 +41,9 @@ window.addEventListener("load", function() {
       // count = mediaQuery.matches ? 100 : 55;
       count =  mediaQuery.matches ? 100 : 40
       condition = mediaQuery.matches ? 300 : 80
-      console.log(count, condition)
   		e = e || window.event
   		e.preventDefault()
       e.target.classList[1] === "prev" ? carouselCount += count : carouselCount -= count
-      console.log(carouselCount);
   		slider();
   		if (e.type !== "autoClick") {
   			clearInterval(scrollInterval);
