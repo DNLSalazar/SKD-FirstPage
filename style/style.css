@@ -444,14 +444,15 @@ header {
 .workCards {
   flex-wrap: wrap;
   margin: 50px 0 100px 0;
+  position: relative;
 }
 
 .work{
   margin: 20px 50px;
   width: 300px;
   height: 250px;
+  position: absolute;
   background-color: black;
-  margin: 0 20 0 20;
   transition: .5s ease-in-out;
   display: flex;
   justify-content: center;
@@ -467,19 +468,6 @@ header {
 .work:hover > h2 {
   opacity: 1;
 }
-
-.work:nth-child(3):hover {
-  box-shadow: -250px 250px 0px 250px inset rgba(255, 255, 255, 0.527);
-}
-
-.work:nth-child(1):hover {
-  box-shadow: 250px 250px 0px 250px inset rgba(255, 255, 255, 0.527);
-}
-
-.work:nth-child(2):hover {
-  box-shadow: 0px 250px 0px 250px inset rgba(255, 255, 255, 0.527);
-}
-
 /*-----------------------------------PERSONAL CARDS---------------------------------*/
 
 #personal {
