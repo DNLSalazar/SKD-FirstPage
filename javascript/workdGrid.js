@@ -23,7 +23,6 @@ function workFilter () {
   let [col, current, itemsFiltered, file] = [3, 0, 0, 0]
   for (let i = 0; i < WORKS_LENGTH; i++) {
     if (!FILTER || FILTER === works[i].getAttribute("workType")) {
-      console.log("YUP")
       works[i].removeEventListener("transitionend", disappear)
       works[i].style.setProperty("display", "flex")
 
@@ -46,6 +45,7 @@ function workFilter () {
     }
   }
   worksContainer.style.setProperty("min-height", (file * HEIGHT) + "px")
+  worksContainer.style.setProperty("max-width", (col * WIDTH) + "px")
 }
 
 function position (data, fila, columna) {

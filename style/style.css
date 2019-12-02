@@ -430,6 +430,10 @@ header {
   background-color: #f0f0f0;
   flex-direction: column;
   flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding: 80px 0;
+  min-height: unset;
+  height: auto;
 }
 
 #works h1{
@@ -448,12 +452,11 @@ header {
 }
 
 .work{
-  margin: 20px 50px;
   width: 300px;
   height: 250px;
   position: absolute;
   background-color: black;
-  transition: .5s ease-in-out;
+  transition: .25s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
