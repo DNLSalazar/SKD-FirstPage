@@ -2,18 +2,26 @@ var filterButtons = document.getElementsByClassName("buttonFilter")
 const FILTER_LENGTH = filterButtons.length
 var works = document.getElementsByClassName("work")
 const WORKS_LENGTH = works.length
-const [WIDTH, HEIGHT] = [312, 260]
+const [WIDTH, HEIGHT] = [312, 178]
 var worksContainer = document.getElementById("worksContainer")
 
 window.addEventListener("load", function () {
   for (let i = 0; i < FILTER_LENGTH; i++) {
     filterButtons[i].addEventListener("click", workFilter)
   }
+
+  workFilter(true)
 })
 
-function workFilter () {
-  const FILTER = this.getAttribute("filterType") === "all" ? null
-  : this.getAttribute("filterType")
+function workFilter (flag) {
+  let FILTER
+
+  if (flag === true) {
+    FILTER = null
+  } else {
+    FILTER = this.getAttribute("filterType") === "all" ? null
+    : this.getAttribute("filterType")
+  }
 
   let filtered = FILTER ?
   worksContainer.querySelectorAll(".work[workType=" + FILTER + "]")
